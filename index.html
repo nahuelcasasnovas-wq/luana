@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para vos, Luana ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-snap-type:y mandatory;
+overflow-y:scroll;
+scroll-behavior:smooth;
+}
+
+body{
+background:black;
+color:white;
+}
+
+.seccion{
+height:100vh;
+width:100%;
+position:relative;
+scroll-snap-align:start;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+}
+
+.seccion img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(.45);
+}
+
+.texto{
+position:relative;
+z-index:2;
+padding:25px;
+max-width:900px;
+}
+
+h1{
+margin-bottom:15px;
+font-size:34px;
+text-shadow:0 0 15px black;
+}
+
+p{
+font-size:20px;
+line-height:1.6;
+text-shadow:0 0 10px black;
+}
+
+button{
+margin-top:20px;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+background:#ff4f93;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+#final{
+display:none;
+margin-top:25px;
+font-size:26px;
+}
+
+#inicio{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+font-size:30px;
+text-align:center;
+padding:30px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div id="inicio">
+❤️ Tocá la pantalla para comenzar ❤️
+</div>
+
+<audio id="musica" loop>
+<source src="no hay nadie mas.mp3" type="audio/mpeg">
+</audio>
+
+<section class="seccion">
+<img src="foto1.jpg">
+<div class="texto">
+<h1>❤️ Para vos, Luana ❤️</h1>
+<p>Hay personas que llegan a tu vida y sin darse cuenta lo cambian todo...</p>
+</div>
+</section>
+
+<section class="seccion">
+<img src="foto2.jpg">
+<div class="texto">
+<p>Y vos llegaste para convertir momentos comunes en recuerdos inolvidables.</p>
+</div>
+</section>
+
+<section class="seccion">
+<img src="foto3.jpg">
+<div class="texto">
+<p>Cada momento con vos se convirtió en algo especial.</p>
+</div>
+</section>
+
+<section class="seccion">
+<img src="foto4.jpg">
+<div class="texto">
+<p>Gracias por hacerme sentir amado desde el primer día.</p>
+</div>
+</section>
+
+<section class="seccion">
+<img src="foto5.jpg">
+<div class="texto">
+<h1>❤️ 3 Meses Juntos ❤️</h1>
+
+<p>
+Tres meses llenos de momentos, risas, abrazos, besos y recuerdos que nunca voy a olvidar.
+<br><br>
+Gracias por formar parte de mi vida y por hacerme tan feliz cada día.
+</p>
+
+</div>
+</section>
+
+<section class="seccion">
+<img src="foto5.jpg">
+<div class="texto">
+
+<p>
+Luana, una mujer que hizo que vuelva a tener sentido todo, una mujer que me hace ir por el camino correcto, alguien que me hace sentir prioridad y el ser más amado desde el primer día en que empezó todo, admiro todos los dias tu esfuerzo y tu bondad por querer hacer las cosas de la manera más amorosa y correcta posible conmigo.
+<br><br>
+Intento todos los días darte lo mismo que recibo, ya que sos la persona que más me importa y que más amo y voy a amar siempre. No quiero que pienses lo contrario nunca, pase lo que pase, siempre voy a estar a tu lado apoyándote en las buenas y en las malas.
+<br><br>
+Te amo hoy, mañana y siempre ❤️
+</p>
+
+</div>
+</section>
+
+<section class="seccion">
+<img src="foto2.jpg">
+<div class="texto">
+
+<h1>❤️ Te elegiría una y mil veces más ❤️</h1>
+
+<button onclick="mostrarMensaje()">
+✨ Por muchos momentos más ✨
+</button>
+
+<div id="final">
+❤️ Te amo hoy, mañana y siempre ❤️
+</div>
+
+</div>
+</section>
+
+<script>
+
+const inicio=document.getElementById("inicio");
+const musica=document.getElementById("musica");
+
+inicio.addEventListener("click",function(){
+
+musica.play();
+
+inicio.style.opacity="0";
+
+setTimeout(()=>{
+inicio.style.display="none";
+},500);
+
+});
+
+function mostrarMensaje(){
+document.getElementById("final").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
